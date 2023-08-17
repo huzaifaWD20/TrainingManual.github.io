@@ -1,0 +1,334 @@
+body
+{
+    background-color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar Start */
+.nav-link.show {
+    color: white !important;
+}
+
+.nav-link.active,
+.nav-link.show {
+    color: white !important;
+}
+
+.dropdown-menu a
+{
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus,
+.dropdown-menu a:active {
+    color: white;
+    background-color: black;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-item:hover ,
+.nav-link:hover{
+    background-color: #EB0A1E;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.navbar-brand
+{
+    font-size: 30px;
+    font-weight: 600;
+    color: #EB0A1E;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand:hover
+{
+    color: #EB0A1E;
+    text-decoration: none;
+}
+.navbar-brand span
+{
+    vertical-align: sub;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-family: 'Dancing Script', cursive;
+    padding-left: 5px;
+}
+
+.flag {
+    border-left: 1px solid #58595B;
+    padding-left: 10px;
+    width: 40px;
+    height: 30px;
+}
+/* Navbar End */
+
+/* Video Carousel Start*/
+.carousel-inner {
+    width: 100%;
+    max-width: 100%;
+    height: 523px;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.carousel-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-indicators li
+{
+    list-style: none;
+    background-color: #EB0A1E !important;
+    align-items: center;
+    margin-left: 60%;
+    width: max-content;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000000;
+    background-size: 30%, 30%;
+}
+/* Video Carousel End*/
+
+/* Training Essentials Para Start */
+.content-container {
+    padding-top: 80px ;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.content-container h2 {
+    color: black;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.content-container p
+{
+    color: #58595b;
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+.content-container.scrolled
+{
+    transform: translateY(-50px);
+}
+/* Training Essentials Para End */
+
+/* Training Framework Start */
+#Card-CarouselItem
+{
+    height: 500px;
+}
+
+.card-container
+{
+    padding-top: 10px;
+}
+
+.card-container.scrolled
+{
+    transform: translateY(-50px);
+}
+
+.btn
+{
+    color: #000000 !important;
+    background-color: #FFFFFF;
+    border: none;
+    box-shadow: 0 0.8rem 3rem rgba(114, 113, 113, 0.5) !important;
+    transition: 0.4s ease-in;
+    width: 50%;
+}
+
+.btn:focus 
+{
+    outline: none !important;
+    box-shadow: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+    background-color: white !important;
+    border: 1px solid #000000;
+    color: #000000 !important;
+}
+
+.btn:hover 
+{
+    box-shadow: none !important;
+    background-image: none !important;
+    background-color: white !important;
+    border: 1px solid #000000 !important;
+    color: #000000 !important;
+}
+
+.btn-primary
+{
+    color: #fff;
+    background-color: white !important;
+    border-color: white !important;
+}
+
+.card-title
+{
+    color: #EB0A1E;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.card-text
+{
+    color: #58595B;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+input:focus 
+{
+    outline: none !important;
+}
+
+.imageSecond
+{
+    background-image: url("../images/industrial-automation-688307696.png  ");
+    background-size: cover;
+}
+
+.imageFirst 
+{
+    background-image: url("../images/karakuri-doll-999433290.png");
+    background-size: cover;
+}
+
+.imageThird
+{
+    background-image: url("../images/engineers-working--for-karakuri-implementation-in-automobile-plant-578452500.png");
+    background-size: cover;
+}
+
+.imageFourth
+{
+    background-image: url("../images/karakuri-industrial-racks-and-automation-in-industry-605538385.png");
+    background-size: cover;
+}
+
+#carouselExampleIndicators
+{
+    height: 500px !important;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) 
+{
+    .imgHero {
+        transform: translateX(0%) !important;
+        transform: translateY(-28%) !important;
+        height: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .card {
+        width: 100% !important;
+        height: 60% !important;
+    }
+    .buttonCard {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    .imgSec {
+        height: 100% !important;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px)
+{
+    .imgHero {
+        transform: translateX(0%) !important;
+        transform: translateY(-28%) !important;
+        height: 35%;
+    }
+    .card {
+        width: 100% !important;
+    }
+
+    #Card-CarouselInner
+    {
+        height: 150% !important;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) 
+{
+    .imgHero {
+        height: 100%;
+        justify-content: center;
+    }
+    .card {
+        width: 100% !important;
+    }
+    
+    #carouselExampleIndicators
+    {
+        height: 450px !important;
+    }
+}
+
+@keyframes arrow 
+{
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.buttonCard .btn
+{
+    white-space: nowrap;
+}
+
+.buttonCard .btn::after {
+    content: '→';
+    display: inline-block;
+    margin-left: 5px;
+    animation: arrow 1s ease-in-out;
+}
+
+/* Training Framework End */
+
+
+  
+  

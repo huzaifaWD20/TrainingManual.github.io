@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+
+
+
+body {
+  background-color: #111;
+  background-image: radial-gradient(#333, #111);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  width: 100vw;
+  font-weight: 700;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#fly-in {
+  font-size: 10em;
+  margin: 40vh auto;
+  margin-top: 30vh;
+  height: 20vh; 
+  color: #EA0B1E;
+}
+
+#fly-in span {
+  color: #fff;
+  display: block;
+  font-size: .4em;
+  opacity: .8;
+  font-family: 'Dancing Script', cursive;
+}
+
+#fly-in div {
+ position: fixed;
+  margin: 2vh 0;
+  opacity: 0;
+  left: 10vw;
+  width: 80vw;
+  animation: switch 32s linear infinite;
+}
+
+#fly-in div:nth-child(2) { animation-delay: 4s}
+#fly-in div:nth-child(3) { animation-delay: 8s}
+#fly-in div:nth-child(4) { animation-delay: 12s}
+#fly-in div:nth-child(5) { animation-delay: 16s}
+#fly-in div:nth-child(6) { animation-delay: 20s}
+#fly-in div:nth-child(7) { animation-delay: 24s}
+#fly-in div:nth-child(8) { animation-delay: 28s}
+
+@keyframes switch {
+    0% { opacity: 0;filter: blur(20px); transform:scale(12)}
+    3% { opacity: 1;filter: blur(0); transform:scale(1)}
+    10% { opacity: 1;filter: blur(0); transform:scale(.9)}
+    13% { opacity: 0;filter: blur(10px); transform:scale(.1)}
+    80% { opacity: 0}
+    100% { opacity: 0}
+}
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  overflow: hidden;
+  left: 0;
+  background-color: #000000;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #000000;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#disclaimer-heading{
+  font-size: 2em;
+  color: #EA0B1E;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#disclaimer-text p {
+  text-align: left;
+  font-style: italic;
+  text-shadow: 2px 2px 8px #FFFFFF;
+  width: 150%;
+  margin-left: -50px;
+}
+
+#goto-btn{
+  position: absolute; 
+  bottom: 0px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
