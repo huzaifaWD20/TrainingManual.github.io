@@ -42,14 +42,6 @@ $(document).ready(function() {
         }
     }, { offset: '90%' });
 
-    $('#section-1-article-3').waypoint(function(direction) {
-        if (direction === 'down') {
-            $('#section-1-article-3').addClass('animate__animated animate__fadeInLeft');
-        } else {
-            $('#section-1-article-3').removeClass('animate__animated animate__fadeInLeft');
-        }
-    }, { offset: '90%' });
-
     $('#section-2 h2').waypoint(function(direction) {
         if (direction === 'down') {
             $('#section-2 h2').addClass('animate__animated animate__fadeInLeft');
@@ -90,3 +82,4 @@ setInterval(function() {
   // Simulate a click on the current radio button
   radioButtons[index].click();
 }, interval);
+
