@@ -57,6 +57,69 @@ $(document).ready(function() {
             $('#section-2 h3').removeClass('animate__animated animate__fadeInLeft');
         }
     }, { offset: '90%' });
+
+    for (let i = 1; i <= 17; i++) {
+        $(`#section-2-article-${i}`).waypoint(function(direction) {
+            if (direction === 'down') {
+                $(`#section-2-article-${i}`).addClass('animate__animated animate__fadeInLeft');
+            } else {
+                $(`#section-2-article-${i}`).removeClass('animate__animated animate__fadeInLeft');
+            }
+        }, { offset: '90%' });
+    }
+
+    $('#section-3 h2').waypoint(function(direction) {
+        if (direction === 'down') {
+            $('#section-3 h2').addClass('animate__animated animate__fadeInLeft');
+        } else {
+            $('#section-3 h2').removeClass('animate__animated animate__fadeInLeft');
+        }
+    }, { offset: '90%' });
+
+    $('#section-3 h3').waypoint(function(direction) {
+        if (direction === 'down') {
+            $('#section-3 h3').addClass('animate__animated animate__fadeInLeft');
+        } else {
+            $('#section-3 h3').removeClass('animate__animated animate__fadeInLeft');
+        }
+    }, { offset: '90%' });
+
+    for (let i = 1; i <= 10; i++) {
+        $(`#section-3-article-${i}`).waypoint(function(direction) {
+            if (direction === 'down') {
+                $(`#section-3-article-${i}`).addClass('animate__animated animate__fadeInLeft');
+            } else {
+                $(`#section-3-article-${i}`).removeClass('animate__animated animate__fadeInLeft');
+            }
+        }, { offset: '90%' });
+    }
+
+    $('#section-4 h2').waypoint(function(direction) {
+        if (direction === 'down') {
+            $('#section-4 h2').addClass('animate__animated animate__fadeInLeft');
+        } else {
+            $('#section-4 h2').removeClass('animate__animated animate__fadeInLeft');
+        }
+    }, { offset: '90%' });
+
+    $('#section-4 h3').waypoint(function(direction) {
+        if (direction === 'down') {
+            $('#section-4 h3').addClass('animate__animated animate__fadeInLeft');
+        } else {
+            $('#section-4 h3').removeClass('animate__animated animate__fadeInLeft');
+        }
+    }, { offset: '90%' });
+
+    for (let i = 1; i <= 7; i++) {
+        $(`#section-4-article-${i}`).waypoint(function(direction) {
+            if (direction === 'down') {
+                $(`#section-4-article-${i}`).addClass('animate__animated animate__fadeInLeft');
+            } else {
+                $(`#section-4-article-${i}`).removeClass('animate__animated animate__fadeInLeft');
+            }
+        }, { offset: '90%' });
+    }
+
 });
 
 
@@ -68,6 +131,14 @@ var radioButtons = document.querySelectorAll('input[type="radio"][name="select"]
 
 // Set the initial index
 var index = 0;
+
+// Add a click event listener to each radio button
+radioButtons.forEach(function(radioButton, i) {
+  radioButton.addEventListener('click', function() {
+    // Update the index when a radio button is clicked
+    index = i;
+  });
+});
 
 // Start the interval
 setInterval(function() {

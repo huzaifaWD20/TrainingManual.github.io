@@ -2,6 +2,8 @@ body
 {
     background-color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Navbar Start */
@@ -133,6 +135,8 @@ body
     color: #58595b;
     padding-top: 10px;
     font-weight: 500;
+    text-align: center;
+    margin: 0 20px;
 }
 
 .content-container.scrolled
@@ -142,32 +146,112 @@ body
 /* Training Essentials Para End */
 
 /* Training Framework Start */
-#Card-CarouselItem
+img
 {
-    height: 500px;
+    max-width: 100%;
 }
 
-.card-container
+.framework-card
 {
-    padding-top: 10px;
+    position: absolute;
+    height: 450px;
+    width: 95%;
+    max-width: 850px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: 0 10px 30px #58595B;
+    margin-top: 50px;
 }
 
-.card-container.scrolled
+.inner-part
 {
-    transform: translateY(-50px);
+    position: absolute;
+    display: flex;
+    height: 360px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
 }
 
-.btn
+.inner-part .img
 {
-    color: #000000 !important;
-    background-color: #FFFFFF;
+    height: 260px;
+    width: 260px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.img img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+#slide1-button:checked ~ .inner-part .card-img-1,
+#slide2-button:checked ~ .inner-part .card-img-2,
+#slide3-button:checked ~ .inner-part .card-img-3,
+#slide4-button:checked ~ .inner-part .card-img-4
+{
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+#slide1-button:checked ~ .inner-part .card-content-1,
+#slide2-button:checked ~ .inner-part .card-content-2,
+#slide3-button:checked ~ .inner-part .card-content-3,
+#slide4-button:checked ~ .inner-part .card-content-4
+{
+    opacity: 1;
+    margin-left: 0;
+    z-index: 100;
+    transition-delay: 0.3s;
+
+}
+
+.card-content .card-title
+{
+    font-size: 30px;
+    font-weight: 700;
+    color: #EB0A1E;
+    margin-bottom: 20px;
+}
+
+.card-content
+{
+    padding: 0 20px 0 35px;
+    width: 500px;
+    margin-left: 50px;
+    opacity: 0;
+    transition: 0.6s;
+    height: 300px;
+}
+
+.card-content button
+{
+    display: inline-flex;
+    padding: 15px 20px;
     border: none;
-    box-shadow: 0 0.8rem 3rem rgba(114, 113, 113, 0.5) !important;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: #FFFFFF;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 0 5px 20px #58595B;
     transition: 0.4s ease-in;
-    width: 50%;
+    position: absolute;
+    margin-left: -240px;
+    top: 100%;
 }
 
-.btn:focus 
+.card-content button:focus
 {
     outline: none !important;
     box-shadow: none !important;
@@ -178,7 +262,7 @@ body
     color: #000000 !important;
 }
 
-.btn:hover 
+.card-content button:hover
 {
     box-shadow: none !important;
     background-image: none !important;
@@ -187,148 +271,332 @@ body
     color: #000000 !important;
 }
 
-.btn-primary
+.sliders
 {
-    color: #fff;
-    background-color: white !important;
-    border-color: white !important;
+    position: absolute;
+    bottom: 5px;
+    left: 65%;
+    transform: translateX(-50%);
+    z-index: 12;
 }
 
-.card-title
+.sliders .slider
 {
+    position: relative;
+    height: 10px;
+    width: 50px;
+    background: #aeafb1;
+    border-radius: 5px;
+    display: inline-flex;
+    margin: 0;
+    cursor: pointer;  
+}
+
+.sliders .slider:hover
+{
+    background: #cdcdcd;
+}
+
+.sliders .slider::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: -100%;
+    background: #58595B;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transition: transform 0.6s;
+    transform-origin: left;
+}
+
+input
+{
+    display: none;
+}
+
+#slide1-button:checked ~ .sliders .slider-1::before,
+#slide2-button:checked ~ .sliders .slider-2::before,
+#slide3-button:checked ~ .sliders .slider-3::before,
+#slide4-button:checked ~ .sliders .slider-4::before
+{
+    transform: scaleX(1);
+    width: 100%;
+}
+
+#section-1 h2,
+#section-1 h3,
+#section-1-article-1,
+#section-1-article-2,
+#section-2 h2,
+#section-2 h3,
+#section-2-article-1,
+#section-2-article-2,
+#section-2-article-3,
+#section-2-article-4,
+#section-2-article-5,
+#section-2-article-6,
+#section-2-article-7,
+#section-2-article-8,
+#section-2-article-9,
+#section-2-article-10,
+#section-2-article-11,
+#section-2-article-12,
+#section-2-article-13,
+#section-2-article-14,
+#section-2-article-15,
+#section-2-article-16,
+#section-2-article-17,
+#section-3 h2,
+#section-3 h3,
+#section-3-article-1,
+#section-3-article-2,
+#section-3-article-3,
+#section-3-article-4,
+#section-3-article-5,
+#section-3-article-6,
+#section-3-article-7,
+#section-3-article-8,
+#section-3-article-9,
+#section-3-article-10,
+#section-4 h2,
+#section-4 h3,
+#section-4-article-1,
+#section-4-article-2,
+#section-4-article-3,
+#section-4-article-4,
+#section-4-article-5,
+#section-4-article-6,
+#section-4-article-7
+{
+    opacity: 0;
+}
+
+#section-1 h2.animate__animated,
+#section-1 h3.animate__animated,
+#section-1-article-1.animate__animated,
+#section-1-article-2.animate__animated,
+#section-2 h2.animate__animated,
+#section-2 h3.animate__animated,
+#section-2-article-1.animate__animated,
+#section-2-article-2.animate__animated,
+#section-2-article-3.animate__animated,
+#section-2-article-4.animate__animated,
+#section-2-article-5.animate__animated,
+#section-2-article-6.animate__animated,
+#section-2-article-7.animate__animated,
+#section-2-article-8.animate__animated,
+#section-2-article-9.animate__animated,
+#section-2-article-10.animate__animated,
+#section-2-article-11.animate__animated,
+#section-2-article-12.animate__animated,
+#section-2-article-13.animate__animated,
+#section-2-article-14.animate__animated,
+#section-2-article-15.animate__animated,
+#section-2-article-16.animate__animated,
+#section-2-article-17.animate__animated,
+#section-3 h2.animate__animated,
+#section-3 h3.animate__animated,
+#section-3-article-1.animate__animated,
+#section-3-article-2.animate__animated,
+#section-3-article-3.animate__animated,
+#section-3-article-4.animate__animated,
+#section-3-article-5.animate__animated,
+#section-3-article-6.animate__animated,
+#section-3-article-7.animate__animated,
+#section-3-article-8.animate__animated,
+#section-3-article-9.animate__animated,
+#section-3-article-10.animate__animated,
+#section-4 h2.animate__animated,
+#section-4 h3.animate__animated,
+#section-4-article-1.animate__animated,
+#section-4-article-2.animate__animated,
+#section-4-article-3.animate__animated,
+#section-4-article-4.animate__animated,
+#section-4-article-5.animate__animated,
+#section-4-article-6.animate__animated,
+#section-4-article-7.animate__animated
+{
+    opacity: 1;
+}
+
+#section-1 h2,
+#section-2 h2,
+#section-3 h2,
+#section-4 h2
+{
+    font-size: 50px;
     color: #EB0A1E;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 2rem;
 }
 
-.card-text
+#section-1 h3,
+#section-2 h3,
+#section-3 h3,
+#section-4 h3
 {
+    animation-delay: 0.1s;
+    font-size: 30px;
     color: #58595B;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 40px;
 }
 
-input:focus 
+#section-1-article-1
 {
-    outline: none !important;
+    animation-delay: 0.5s;
 }
 
-.imageSecond
+#section-1-article-2
 {
-    background-image: url("../images/industrial-automation-688307696.png  ");
-    background-size: cover;
+    animation-delay: 0.6s;
 }
 
-.imageFirst 
+#section-2-article-1
 {
-    background-image: url("../images/karakuri-doll-999433290.png");
-    background-size: cover;
+    animation-delay: 0.7s;
 }
 
-.imageThird
+#section-2-article-2
 {
-    background-image: url("../images/engineers-working--for-karakuri-implementation-in-automobile-plant-578452500.png");
-    background-size: cover;
+    animation-delay: 0.8s;
 }
 
-.imageFourth
+#section-2-article-3
 {
-    background-image: url("../images/karakuri-industrial-racks-and-automation-in-industry-605538385.png");
-    background-size: cover;
+    animation-delay: 0.9s;
 }
 
-#carouselExampleIndicators
+table, th, td
 {
-    height: 500px !important;
+    text-align: center;
+    vertical-align: middle;
+    width: 500px;
 }
 
-/* X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) 
+@media screen and (max-width: 801px) 
 {
-    .imgHero {
-        transform: translateX(0%) !important;
-        transform: translateY(-28%) !important;
-        height: 100%;
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-    .card {
-        width: 100% !important;
-        height: 60% !important;
-    }
-    .buttonCard {
-        padding-left: 4%;
-        padding-right: 4%;
-    }
-    .imgSec {
-        height: 100% !important;
-    }
-}
-
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px)
-{
-    .imgHero {
-        transform: translateX(0%) !important;
-        transform: translateY(-28%) !important;
-        height: 35%;
-    }
-    .card {
-        width: 100% !important;
-    }
-
-    #Card-CarouselInner
+    .inner-part
     {
-        height: 150% !important;
+        flex-direction: column;
+    }    
+    .framework-card
+    {
+        height: 650px;
+        margin-top: 90px; 
+    }
+    .sliders
+    {
+        left: 50%;
+    }
+    .card-content
+    {
+        margin-left: 0;
+        width: auto;
+        margin-top: 1rem;
+    }
+    .card-text
+    {
+        text-align: left !important;
+
+    }
+
+    .card-content button
+    {
+        margin-left: 0;
+        position: static;
+    }
+
+    #section-1
+    {
+        margin-top: 750px !important;
+    }
+
+    #section-1-article-1 p
+    {
+        margin-bottom: 30px !important;
+    }
+
+    #section-1-video1 iframe
+    {
+        width: 400px !important;
+        padding-top: -100px !important;
+    }
+
+    #section-1-article-2 p
+    {
+        margin-bottom: 30px !important;
+    }
+
+    #section-1-image2
+    {
+        margin-bottom: 15px !important;
+    }
+
+    #section-1-video1
+    {
+        padding-top: -0px !important;
     }
 }
 
-/* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) 
-{
-    .imgHero {
-        height: 100%;
-        justify-content: center;
+@media screen and (max-width: 601px) {
+    .framework-card
+    {
+        height: 700px;
     }
-    .card {
-        width: 100% !important;
+
+    .table-responsive
+    {
+        overflow-x: auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* styles for screens smaller than 576px */
+    .hide_text
+    {
+        display: none;
     }
     
-    #carouselExampleIndicators
+    .framework-card
     {
-        height: 450px !important;
+        height: 680px;
+    }
+
+    .card-content 
+    {
+      /* adjust the styles of the card content */
+      margin-left: 0;
+      width: auto;
+      padding: 15px;
+    }
+    .card-title 
+    {
+      /* adjust the styles of the card title */
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .card-text 
+    {
+      /* adjust the styles of the card text */
+      font-size: 16px;
+      text-align: left;
     }
 }
 
-@keyframes arrow 
-{
-    0% {
-        transform: translateX(0);
+@media screen and (max-width: 449px){
+   
+    .sliders .slider
+    {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
     }
-    50% {
-        transform: translateX(5px);
-    }
-    100% {
-        transform: translateX(0);
+
+    #section-1-video1 iframe
+    {
+        width: 350px !important;
     }
 }
-
-.buttonCard .btn
-{
-    white-space: nowrap;
-}
-
-.buttonCard .btn::after {
-    content: '→';
-    display: inline-block;
-    margin-left: 5px;
-    animation: arrow 1s ease-in-out;
-}
-
 /* Training Framework End */
-
-
-  
-  
